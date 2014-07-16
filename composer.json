@@ -1,6 +1,7 @@
 {
     "name": "msamec/mcl",
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Marko Šamec",
