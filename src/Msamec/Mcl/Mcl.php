@@ -2,7 +2,7 @@
 
 class Mcl{
 	public function model($namespace, $function, $role = null){
-		$defaultRoleName = \Config::get('mcl::default');
+		$defaultRoleName = \Config::get('mcl::class');
 		if(class_exists($namespace.'\\'.$role))
 			$className = $namespace.'\\'.$role;
 		elseif(class_exists($namespace.'\\'.$defaultRoleName))
