@@ -19,4 +19,16 @@ class Mcl{
 		else
 			$method->invoke($class);
 	}
+
+	public function make($view, $role = 'main', $data = array(), $mergeData = array())
+	{
+		$role = strtolower($role);
+		try{
+			\View::make($view.'.'.$role);
+		}catch(InvalidArgumentException $ex){
+			$role = 'main';
+			\View::make($view.'.'.$role);
+		}
+		return \View::make($view.'.'.$role, $data, $mergeData);
+	}
 }
