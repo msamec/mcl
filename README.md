@@ -97,3 +97,23 @@ foo
 ```
 
 #### View
+```php
+return Mcl::make('view folder', 'role', $data = array(), $merge_data = array());
+```
+
+This is how structure should look:
+```php
+|-- app
+|   |-- views
+|   |   |-- something
+|   |   |   |-- main.blade.php
+|   |   |   |-- god.blade.php
+```
+Based on the structure above, you would use code similar to this:
+
+```php
+return Mcl::make('something', 'God', $someData);
+```
+
+Mcl::make returns Laravel's view object so you can use View methods like `with->()` and others.
+
